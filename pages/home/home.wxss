@@ -1,0 +1,103 @@
+.search-wrapper {
+    background-color: #42BD55;
+    height: 50rpx;
+    padding: 10rpx 15rpx;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.search-wrapper .search {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26rpx;
+}
+
+.search image {
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 14rpx;
+}
+
+.row {
+    margin-top: 30rpx;
+}
+
+.main .title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.main .title-wrapper .title {
+    font-weight: bold;
+    color: #494949;
+    font-size: 32rpx;
+}
+
+.main .title-wrapper .more {
+    font-size: 30rpx;
+    color: #0db019;
+    display: flex;
+    align-items: center;
+}
+
+.main .title-wrapper .arrow {
+    width: 10rpx;
+    height: 10rpx;
+    border: 2rpx solid #0db019;
+    border-left: none;
+    border-top: none;
+    transform: rotate(-45deg);
+    margin-left: 6rpx;
+}
+
+.items {
+    white-space: nowrap;
+}
+
+.item {
+    margin-left: 30rpx;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.items .item:last-of-type {
+    margin-right: 30rpx;
+}
+
+.item .photo {
+    width: 210rpx;
+    height: 301rpx;
+    margin-bottom: 15rpx;
+}
+
+.item .title {
+    font-weight: bold;
+    font-size: 30rpx;
+    margin-bottom: 4rpx;
+}
+
+.item .score {
+    display: flex;
+    align-items: center;
+    color: #818181;
+    font-size: 28rpx;
+}
+
+.item .score .stars {
+    display: flex;
+    margin-right: 4rpx;
+}
+
+.item .score .star {
+    width: 32rpx;
+    height: 32rpx;
+}

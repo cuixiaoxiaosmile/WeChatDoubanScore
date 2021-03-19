@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/profile/profile",
+    "pages/login/login",
+    "pages/agreement/agreement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "豆瓣评分",
+    "navigationBarTextStyle": "black"
+  },
+  "permission":{
+    "scope.userLocation" : {
+      "desc" : "您的位置将用户获取影院信息"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
