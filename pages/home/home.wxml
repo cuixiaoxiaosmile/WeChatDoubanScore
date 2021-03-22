@@ -6,7 +6,7 @@
         </view>
     </view>
     <view class="main">
-        <view class="row">
+        <view wx:for="{{allMovies}}" wx:key="unique" class="row">
             <view class="title-wrapper">
                 <view class="title">{{item.title}}</view>
                 <view class="more">
@@ -15,7 +15,13 @@
                 </view>
             </view>
             <scroll-view class="items" scroll-x="true">
-                <view wx:for="{{movies}}" wx:key="unique" wx:for-item="movie" class="item">
+                <movie-item class="item"
+                wx:for="{{item.movies}}"
+                wx:key="unique"
+                wx:for-item="movie"
+                movie="{{movie}}">
+                </movie-item>
+                <!-- <view wx:for="{{movies}}" wx:key="unique" wx:for-item="movie" class="item">
                     <image class="photo" src="{{movie.img}}" />
                     <view class="title">{{movie.title}}</view>
                     <view class="score">
@@ -29,7 +35,7 @@
                         </block>
                         <block wx:else>暂无评分</block>
                     </view>
-                </view>
+                </view> -->
             </scroll-view>
         </view>
     </view>

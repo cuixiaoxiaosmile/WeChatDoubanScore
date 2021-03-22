@@ -36,7 +36,9 @@ Page({
                 for (let index = 0; index < movies.length; index++) {
                     this.updateMovie(movies[index])
                 }
-                this.setData({ movies: movies });
+                this.data.allMovies[0].movies = movies;
+                this.setData(this.data);
+                console.log(this.data);
             },
             fail: () => {
                 wx.db.toastFail('获取热映失败');

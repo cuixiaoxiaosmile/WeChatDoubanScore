@@ -68,6 +68,7 @@
     display: inline-flex;
     flex-direction: column;
     width: 160rpx;
+    height: 60rpx;
 }
 
 .items .item:last-of-type {
