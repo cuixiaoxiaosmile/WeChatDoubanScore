@@ -2,12 +2,12 @@ Page({
     data: {
         allMovies: [{
                 title: '影院热映',
-                url: 'top250',
+                url: 'playing',
                 movies: []
             },
             {
                 title: '新片榜',
-                url: 'top250',
+                url: 'showing',
                 movies: []
             },
             {
