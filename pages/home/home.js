@@ -2,12 +2,12 @@ Page({
     data: {
         allMovies: [{
                 title: '影院热映',
-                url: 'playing',
+                url: 'top250',
                 movies: []
             },
             {
                 title: '新片榜',
-                url: 'showing',
+                url: 'top250',
                 movies: []
             },
             {
@@ -19,13 +19,15 @@ Page({
     },
 
     onLoad: function() {
-        this.loadData(this.loadCity);
+        for (let index = 0; index < this.data.allMovies.length; index++) {
+            this.loadData(index, this.loadCity);
+        }
     },
 
     //获取城市影片
-    loadData: function(city) {
+    loadData: function(idx, city) {
         wx.request({
-            url: 'http://39.105.38.10:8081/movie/top250',
+            url: wx.db.url(this.data.allMovies[idx].url),
             data: {
                 city: city
             },
@@ -36,7 +38,7 @@ Page({
                 for (let index = 0; index < movies.length; index++) {
                     this.updateMovie(movies[index])
                 }
-                this.data.allMovies[0].movies = movies;
+                this.data.allMovies[idx].movies = movies;
                 this.setData(this.data);
                 console.log(this.data);
             },
