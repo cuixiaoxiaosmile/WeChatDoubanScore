@@ -25,7 +25,7 @@ Page({
     //获取城市影片
     loadData: function(city) {
         wx.request({
-            url: 'http://39.105.38.10:8081/movie/playing',
+            url: 'http://39.105.38.10:8081/movie/top250',
             data: {
                 city: city
             },
