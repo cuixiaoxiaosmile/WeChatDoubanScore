@@ -3,7 +3,7 @@
     <view class="nav-bar" style="{{navBarStyle}}">
         {{title}}
         <view class="icons">
-            <image bind:tap="back" wx:if="{{back == 'true'}}" class="back" src="/assets/imgs/nav_back.png" />
+            <img bind:tap="back" wx:if="{{back == 'true'}}" class="back" src="/assets/imgs/nav_back.png" />
             <img bind:tap="home" wx:if="{{back=='true'}}" class="home" src="/assets/imgs/nav_home.png" />
         </view>
     </view>
