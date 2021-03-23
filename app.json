@@ -1,12 +1,12 @@
 {
     "pages": [
-        "pages/list/list",
         "pages/home/home",
         "pages/profile/profile",
         "pages/login/login",
         "pages/agreement/agreement",
         "cmps/movie-item/movie-item",
-        "cmps/nav-bar/nav-bar"
+        "cmps/nav-bar/nav-bar",
+        "pages/list/list"
     ],
     "window": {
         "backgroundTextStyle": "light",
