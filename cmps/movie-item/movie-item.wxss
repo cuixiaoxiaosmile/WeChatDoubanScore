@@ -1,6 +1,7 @@
 .item {
-    width: 100%;
-    height: 200rpx;
+    width: 160rpx;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .item .photo {
