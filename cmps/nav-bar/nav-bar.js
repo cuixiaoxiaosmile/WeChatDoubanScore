@@ -9,7 +9,7 @@ Component({
         },
         titleColor: {
             type: String,
-            value: '#fff'
+            value: '#000'
         },
         statusBarColor: {
             type: String,

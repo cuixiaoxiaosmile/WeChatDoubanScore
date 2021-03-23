@@ -4,7 +4,6 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 30rpx;
-    background-color: aqua;
 }
 
 .item {
@@ -12,5 +11,4 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30rpx;
-    background-color: #0f0;
 }
