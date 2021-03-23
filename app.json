@@ -1,25 +1,50 @@
 {
-  "pages": [
-    "pages/home/home",
-    "pages/profile/profile",
-    "pages/login/login",
-    "pages/agreement/agreement",
-    "cmps/movie-item/movie-item",
-    "cmps/nav-bar/nav-bar",
-    "pages/list/list",
-    "pages/detail/detail"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "豆瓣评分",
-    "navigationBarTextStyle": "black"
-  },
-  "permission": {
-    "scope.userLocation": {
-      "desc": "您的位置将用户获取影院信息"
-    }
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/home/home",
+        "pages/profile/profile",
+        "pages/login/login",
+        "pages/agreement/agreement",
+        "cmps/movie-item/movie-item",
+        "cmps/nav-bar/nav-bar",
+        "pages/list/list",
+        "pages/detail/detail",
+        "pages/rank/rank"
+    ],
+    "tabBar": {
+        "color": "#aaaaaa",
+        "selectedColor": "#56b465",
+        "backgroundColor": "#ffffff",
+        "list": [{
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/assets/imgs/ic_tab_home_normal.png",
+                "selectedIconPath": "/assets/imgs/ic_tab_home_active.png"
+            },
+            {
+                "pagePath": "pages/rank/rank",
+                "text": "榜单",
+                "iconPath": "/assets/imgs/ic_tab_subject_normal.png",
+                "selectedIconPath": "/assets/imgs/ic_tab_subject_active.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "我的",
+                "iconPath": "/assets/imgs/ic_tab_profile_normal.png",
+                "selectedIconPath": "/assets/imgs/ic_tab_profile_active.png"
+            }
+        ]
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "豆瓣评分",
+        "navigationBarTextStyle": "black"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "您的位置将用户获取影院信息"
+        }
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }
