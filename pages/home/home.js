@@ -19,9 +19,24 @@ Page({
     },
 
     onLoad: function() {
+        //请求网络端新数据
+        // for (let index = 0; index < this.data.allMovies.length; index++) {
+        //     this.loadData(index, this.loadCity);
+        // }
+
+        //加载本地缓存数据
+        this.loadLocalData();
+    },
+
+    //读取缓存数据
+    loadLocalData: function() {
         for (let index = 0; index < this.data.allMovies.length; index++) {
-            this.loadData(index, this.loadCity);
+            let obj = this.data.allMovies[index];
+            obj.movies = wx.getStorageSync(obj.title);
+            console.log(`读取本地缓存数据${index}:`);
+            console.log(obj.movies);
         }
+        this.setData(this.data);
     },
 
     //获取城市影片
@@ -33,13 +48,26 @@ Page({
             },
             header: { 'content-type': 'json' },
             success: (res) => {
-                console.log(res)
-                let movies = res.data.data.subject
+                console.log(`接口返回数据${idx}:`);
+                console.log(res);
+                const movies = res.data.data.subject
+                let obj = this.data.allMovies[idx]
+                obj.movies = [];
                 for (let index = 0; index < movies.length; index++) {
-                    this.updateMovie(movies[index])
+                    let movie = movies[index];
+                    this.updateMovie(movie);
+                    obj.movies.push(movie);
                 }
-                this.data.allMovies[idx].movies = movies;
+                console.log(`临时数据obj${idx}:`);
+                console.log(obj);
+
                 this.setData(this.data);
+                //将movies数组缓存到本地
+                wx.setStorage({
+                    key: obj.title,
+                    data: obj.movies
+                });
+                console.log(`网络数据处理后的本地数据${idx}:`);
                 console.log(this.data);
             },
             fail: () => {
