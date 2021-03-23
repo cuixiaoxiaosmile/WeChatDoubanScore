@@ -1,0 +1,2 @@
+<!--pages/detail/detail.wxml-->
+<nav-bar title="{{title}}"></nav-bar>

@@ -1,4 +1,4 @@
-<nav-bar class="nav-bar" bind:backTap="back" bind:homeTap="home" title="{{title}}" back="true" home="true"></nav-bar>
+<nav-bar class="nav-bar" bind:backTap="back" bind:homeTap="home" title="{{title}}"></nav-bar>
 <view class="container">
     <view class="item" wx:for="{{movies}}" wx:key="unique" wx:for-item="movie">
         <movie-item movie="{{movie}}"></movie-item>
