@@ -42,7 +42,29 @@ Component({
      */
     methods: {
         back: function() {
-            this.tr
+            this.triggerEvent('backTap', { name: 'mj' });
+            wx.navigateBack();
+        },
+        home: function() {
+            this.triggerEvent('homeTap', { age: 18 });
+            wx.navigateBack({
+                delta: 999
+            });
+        }
+    },
+
+    lifetimes: {
+        attached: function() {
+            const statusBarStyle = `
+        height:${wx.db.statusBarHeight}px;
+        background-color:${this.data.statusBarColor};
+        `;
+            const navBarStyle = `
+        color:${this.data.titleColor};
+        height:${wx.db.navBarHeight}px;
+        background-color:${this.data.navBarColor};
+        `;
+            this.setData({ statusBarStyle, navBarStyle });
         }
     }
 })
